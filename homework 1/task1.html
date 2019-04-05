@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Задача 1</h1>
+  <p >Моля въведете 3 числа:</p>
+  <form>
+  A: <input type="text" name="num_a" /> <br>
+  B: <input type="text" name="num_b" /> <br>
+  C: <input type="text" name="num_c" /> <br>
+  <button onclick="compare()">Сравни </button>
+  <p id="result"></p>
+</form>
+  <script>
+function compare() {
+  let a = document.getElementsByName('num_a')[0].value;
+  let b = document.getElementsByName('num_b')[0].value;
+  let c = document.getElementsByName('num_c')[0].value;
+
+    if( (c < b && c > a) || (c > b && c < a)) {
+        console.log(c + ' is between ' + a + ' and ' + b);
+        document.getElementById("result").innerHTML = "c + ' is between ' + a + ' and ' + b";
+    } 
+    else {
+        console.log(c + ' is not between ' + a + ' and ' + b);
+        document.getElementById("result").innerHTML = "c + ' is not between ' + a + ' and ' + b";
+    }
+} 
+  </script>
+</body>
+</html>
