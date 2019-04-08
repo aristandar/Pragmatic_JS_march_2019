@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+</head>
+<body>
+  <h1>Задача 2</h1>
+  <p>Въведете числа чрез натискане на бутона:</p>
+  <button onclick="NumberActions()">Аритметични действия с числа</button>
+  <p id="num1"></p>
+  <p id="num2"></p>
+  <form>
+    Сбор: <input type="text" name="sum" /> <br>
+    Разлика: <input type="text" name="subtraction" /> <br>
+    Произведение: <input type="text" name="multiplication" /> <br>
+    Остатък от деление: <input type="text" name="division" /> <br>
+  </form>
+  <p id="subtraction"></p>
+  <p id="multiplication"></p>
+  <p id="division"></p>
+
+
+<script>
+function NumberActions() {
+  let number1 = prompt("Моля въведете целочислено число", "");
+  let number2 = prompt("Моля въведете още едно целочислено число", "");
+  let sum  = Number(number1) + Number(number2);
+  let subtraction  = Number(number1) - Number(number2);
+  let multiplication  = Number(number1) * Number(number2);
+  let division  = Number(number1) % Number(number2);
+
+  if (number1 != null) {
+    document.getElementById("num1").innerHTML =
+    "Първото въведено число е: " + number1;
+  }
+  
+  if (number2 != null) {
+    document.getElementById("num2").innerHTML =
+    "Второто въведено число е: " + number2;
+  }
+
+    document.getElementsByName('sum')[0].value = sum;
+    document.getElementsByName('subtraction')[0].value = subtraction;
+    document.getElementsByName('multiplication')[0].value = multiplication;
+    document.getElementsByName('division')[0].value = division;
+}
+</script>
+</body>
+</html>
