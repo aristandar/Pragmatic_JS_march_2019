@@ -28,8 +28,14 @@ function minMaxSum() {
 
 if (isPositiveInteger()) {
 console.log("positive");
+let sortArray = array.sort((a, b) => a - b);
+console.log(sortArray);
+let min = sortArray[0] + sortArray[1] + sortArray[2] + sortArray[3];
+let max = sortArray[1] + sortArray[2] + sortArray[3] + sortArray[4];
+document.getElementById('results-five').innerHTML = min + ' ' + max;
 }
+
   else {
-  document.getElementById('results-five').innerHTML = 'Please enter positive integer numbers!';;
+  document.getElementById('results-five').innerHTML = 'Please enter positive integer numbers!';
   }
 }
