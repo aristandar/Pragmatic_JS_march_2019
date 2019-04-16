@@ -1,19 +1,13 @@
-function isPositiveInteger() {
-    console.log(array);
+function isPositiveInteger(num) {
     let status = true;
-    for (var i = 0; i < array.length; i++) {
-      if (Number.isInteger(array[i]) && array[i] > Number(0)) {
+      if (Number.isInteger(num) && Number(num) > Number(0)) {
       status = true;    
       }
       else {
-        console.log(array[i]);
         status = false;
-        break;
       }
       return status;
     }
-  }
-
 
 
 //Problem 3: A Very Big Sum
@@ -22,6 +16,10 @@ function veryBigSum() {
 
   // read the size of the array
   let arrNumber = Number(document.getElementsByClassName('input-task-3')[0].value);
+  if ( ! isPositiveInteger(arrNumber)) {
+    document.getElementById('results-three').innerHTML = 'Result: Please enter positive integer!!!';
+  }
+  else {
   let arr = [];
 
   //read the array from prompt
@@ -37,8 +35,7 @@ function veryBigSum() {
   }
 
   document.getElementById('results-three').innerHTML = 'Result: the integer sum of the elements in the array = ' + bigSum;
-
-
+}
 }
 
 
@@ -53,7 +50,7 @@ function minMaxSum() {
 
     let array = [a0, a1, a2, a3, a4];
 
-if (isPositiveInteger()) {
+if ((isPositiveInteger(a0)) && (isPositiveInteger(a1)) && (isPositiveInteger(a2)) && (isPositiveInteger(a3)) && (isPositiveInteger(a4))) {
 console.log("positive");
 let sortArray = array.sort((a, b) => a - b);
 console.log(sortArray);
