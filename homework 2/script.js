@@ -1,3 +1,29 @@
+//Problem 3: A Very Big Sum
+
+function veryBigSum() {
+
+  // read the size of the array
+  let arrNumber = Number(document.getElementsByClassName('input-task-3')[0].value);
+  let arr = [];
+
+  //read the array from prompt
+  for (var i = 0; i < arrNumber; i++) {
+    arr[i] = Number(prompt("Моля въведете число:"));
+  }
+
+  console.log(arr);
+
+  bigSum = 0;
+  for (var i = 0; i < arrNumber; i++) {
+    bigSum +=arr[i];
+  }
+
+  document.getElementById('results-three').innerHTML = 'Result: the integer sum of the elements in the array = ' + bigSum;
+
+
+}
+
+
 function minMaxSum() {
 
     // Get the user input values
@@ -32,10 +58,12 @@ let sortArray = array.sort((a, b) => a - b);
 console.log(sortArray);
 let min = sortArray[0] + sortArray[1] + sortArray[2] + sortArray[3];
 let max = sortArray[1] + sortArray[2] + sortArray[3] + sortArray[4];
-document.getElementById('results-five').innerHTML = min + ' ' + max;
+document.getElementById('results-five').innerHTML = 'Result: (min Sum , max Sum) = ' + min + ' ' + max;
 }
 
   else {
   document.getElementById('results-five').innerHTML = 'Please enter positive integer numbers!';
-  }
+  } 
 }
+
+
