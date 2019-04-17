@@ -1,0 +1,23 @@
+{
+  "name": "pragmatic_js_march_2019",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "task10.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aristandar/Pragmatic_JS_march_2019.git"
+  },
+  "author": "Darakev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aristandar/Pragmatic_JS_march_2019/issues"
+  },
+  "homepage": "https://github.com/aristandar/Pragmatic_JS_march_2019#readme"
+}
