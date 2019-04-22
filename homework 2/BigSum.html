@@ -1,0 +1,92 @@
+<script>
+
+    // function for checking positive integers
+    function isPositiveInteger(number) {
+        let status = true;
+        if (!Number.isInteger(number) || Number(number) <= Number(0)) {
+            status = false;
+        }
+        return status;
+    }
+
+    // function for checking positive integers in Array
+    function isPositiveIntegerArray(numbersArray) {
+        let status = true;
+        for (const key of numbersArray) {
+            console.log(key);
+            if (!Number.isInteger(key) || Number(key) <= Number(0)) {
+                status = false;
+                console.log(key);
+                break;
+            }
+        }
+
+        return status;
+    }
+
+    // function for reading the array
+    function entryArrayData() {
+        let arrSize = Number(prompt("Enter size of the array:"));
+        let positiveInteger = isPositiveInteger(arrSize); //Calling the function for positive integers
+        if (positiveInteger) {
+            let Data = [];
+            for (var i = 0; i < arrSize; i++) {
+                Data[i] = Number(prompt("Enter a number:"));
+            }
+            console.log(Data);
+            return Data;
+        }
+        else {
+            alert('Please enter positive integer!!!');
+        }
+    }
+
+    //Problem 3: A Very Big Sum
+
+    function aVeryBigSum() {
+        let arrData = entryArrayData(); // Calling the function for reading the array
+        let bigSum = 0;
+        for (var i = 0; i < arrData.length; i++) {
+            //console.log(arrData[i]);
+            if ((typeof arrData[i] == 'number') && (!Number.isNaN(arrData[i]))) {
+                bigSum += arrData[i];;
+            }
+        }
+        console.log('Sum of numbers = ' + bigSum);
+        return bigSum;
+    }
+
+
+    // Problem 5: Min Max Sum
+    function minMaxSum() {
+
+        let minMaxData = entryArrayData();
+        let positiveNumbers = isPositiveIntegerArray(minMaxData);
+
+        if (positiveNumbers) {
+            let sortArray = minMaxData.sort((a, b) => a - b);
+            let minSum = 0;
+            let maxSum = 0;
+            console.log(sortArray);
+            for (var i = 0; i < sortArray.length - 1; i++) {
+                //console.log(arrData[i]);
+                if ((typeof sortArray[i] == 'number') && (!Number.isNaN(sortArray[i]))) {
+                    minSum += sortArray[i];;
+                }
+            }
+            for (var i = 1; i < sortArray.length; i++) {
+                //console.log(arrData[i]);
+                if ((typeof sortArray[i] == 'number') && (!Number.isNaN(sortArray[i]))) {
+                    maxSum += sortArray[i];
+                }
+            }
+            console.log('min sum ' + minSum);
+            console.log('max sum ' + maxSum);
+        }
+
+
+        else {
+            alert('Please enter positive integer!!!');
+        }
+    }
+</script>

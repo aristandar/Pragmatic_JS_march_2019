@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework 1</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="script.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #dedede;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body > div {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            margin: 2%;
+        }
+
+        h1 {
+            width: 100%;
+            text-align: center;
+        }
+
+        .main-wrapper > div {
+            padding: 10px;
+            border: 1px solid #bdbdbd;
+            background: #fff;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        label {
+            float: left;
+            margin-bottom: 5px
+        }
+
+        label:nth-of-type(4), p {
+            clear: both;
+        }
+
+        .Result {
+            margin-top: 115px
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #bdbdbd;
+            border-radius: 5px;
+            margin-right: 10px;
+            max-width: 150px;
+        }
+
+        .main-wrapper > div > button {
+            background-color: #007bff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            padding: 10px;
+            color: #fff;
+        }
+
+        .main-wrapper > div > button:hover {
+            background-color: #1586ff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Homework 1</h1>
+    <div class="main-wrapper">
+        <div class="task-holder">
+            <p>Задача 1 - Да се провери дали С е между A и B</p>
+            <label>A:</label>
+            <input class="input-task-1" type="number" placeholder="Въведете число">
+            <label>В:</label>
+            <input class="input-task-1" type="number" placeholder="Въведете число">
+            <label>С:</label>
+            <input class="input-task-1" type="number" placeholder="Въведете число">
+            <p id="results-one">Резултат</p>
+            <button type="button" id="btn-task-1" onclick="taskOne()">Пресметни</button>
+        </div>
+        <div class="task-holder">
+            <p>Задача 2 - Запишете сума, разлика, произведение и остатък от деление на А В</p>
+            <label>A:</label>
+            <input class="input-task-2" type="text" placeholder="Въведете число">
+            <label>B:</label>
+            <input class="input-task-2" type="text" placeholder="Въведете число">
+            <p id="results-two">Резултат</p>
+            <button type="button" id="btn-task-2" onclick="taskTwo()">Пресметни</button>
+        </div>
+        <div class="task-holder">
+            <p>Problem 3: A Very Big Sum</p>
+
+            <p>Calculate and print the sum of the elements in an array, keeping in mind that some of those integers may be quite large.</p>
+            
+            <label>Size: <input class="input-task-3" type="number" placeholder="Enter size for the array"></label>
+            
+            <p id="results-three" class="Result"><b>Result:</b></p>
+            
+            <button type="button" id="btn-task-3" onclick="veryBigSum()">Solve the problem</button>
+        </div>
+        <div class="task-holder">
+            <p>Задача 4 - Разпечатайте А и В в нарастващ ред</p>
+            <label>A:</label>
+            <input class="input-task-4" type="text" placeholder="Въведете число">
+            <label>B:</label>
+            <input class="input-task-4" type="text" placeholder="Въведете число">
+            <p id="results-four">Резултат</p>
+            <button type="button" id="btn-task-4" onclick="taskFour()">Пресметни</button>
+        </div>
+        <div class="task-holder">
+            <p>Problem 5: Min-Max Sum</p>
+
+            <p>Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers.</p>
+            
+            <label>a0: <input class="input-task-5" type="number" placeholder="Enter a number"></label>
+            
+            <label>a1: <input class="input-task-5" type="number" placeholder="Enter a number"></label>
+            
+            <label>a2:  <input class="input-task-5" type="number" placeholder="Enter a number"></label>
+           
+            <label>a3: <input class="input-task-5" type="number" placeholder="Enter a number"></label>
+            
+            <label>a4: <input class="input-task-5" type="number" placeholder="Enter a number"></label>
+            
+            <p id="results-five" class="Result"><b>Result:</b></p>
+
+            <button type="button" id="btn-task-5" onclick="minMaxSum()">Solve the problem</button>
+        </div>
+        <div class="task-holder">
+            <p>Задача 6 - Разменете стойностите на А В и С -> А = В, В = С, С = А</p>
+            <label>A:</label>
+            <input class="input-task-6" type="number" placeholder="Въведете число">
+            <label>В:</label>
+            <input class="input-task-6" type="number" placeholder="Въведете число">
+            <label>С:</label>
+            <input class="input-task-6" type="number" placeholder="Въведете число">
+            <p id="results-six">Резултат</p>
+            <button type="button" id="btn-task-6" onclick="taskSix()">Пресметни</button>
+        </div>
+        <div class="task-holder">
+            <p>Задача 7 - Вземете решение според ситуацията:</p>
+            <label>Час:</label>
+            <input class="input-task-7" type="text" placeholder="Пример: 14">
+            <label>Пари:</label>
+            <input class="input-task-7" type="text" placeholder="Пример: 9.80">
+            <label>Болен/а ли сте:</label>
+            <input type="checkbox" name="health-check" id="checkbox-health">
+            <p id="results-seven">Резултат</p>
+            <button type="button" id="btn-task-7" onclick="taskSeven()">Какво да правя?</button>
+        </div>
+    </div>
+
+</body>
+</html>

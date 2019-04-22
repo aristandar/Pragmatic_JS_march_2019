@@ -1,0 +1,37 @@
+<script>
+
+    //Problem 3: A Very Big Sum
+
+    function isPositiveInteger(number) {
+        let status = true;
+        if ( ! Number.isInteger(number) || Number(number) <= Number(0)) {
+            status = false;
+        }
+        return status;
+    }
+    // read the size of the array
+    let arrSize = Number(prompt("Enter size of the array:"));
+    console.log(arrSize);
+    if (!isPositiveInteger(arrSize)) {
+        alert('Please enter positive integer!!!');
+    }
+    else {
+        let arr = [];
+        let bigSum = 0;
+
+        //read the array from prompt
+        for (var i = 0; i < arrSize; i++) {
+            arr[i] = Number(prompt("Enter a number:"));
+            console.log(arr[i]);
+            if (Number.isNaN(arr[i])) {
+                alert("Please enter numbers");
+                continue;
+            }
+            else {
+                bigSum += arr[i];
+            }
+            console.log(arr);
+            console.log('sum = ' + bigSum);
+        }
+    }
+</script>
