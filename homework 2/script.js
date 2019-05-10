@@ -1,15 +1,3 @@
-function isPositiveInteger(num) {
-  let status = true;
-  if (Number.isInteger(num) && Number(num) > Number(0)) {
-    status = true;
-  }
-  else {
-    status = false;
-  }
-  return status;
-}
-
-
 //Problem 3: A Very Big Sum
 
 function veryBigSum() {
@@ -63,5 +51,4 @@ function minMaxSum() {
     document.getElementById('results-five').innerHTML = 'Please enter positive integer numbers!';
   }
 }
-
 

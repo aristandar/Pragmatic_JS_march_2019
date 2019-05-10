@@ -26,12 +26,6 @@
         }
     }
 
-    //Problem 1: Compare the Triplets
-
-    function triplets() {
-
-    }
-
     //Problem 3: A Very Big Sum
 
     function aVeryBigSum() {
@@ -63,15 +57,25 @@
     //Problem 4: Staircase
 
     function staircase() {
-        let staircaseResult = '';
-        let n = Number(prompt("Enter size of the starircase and see the console:"));
-        for (var row = 1; row <= n; row++) {
-            for (var column = 1; column <= row; column++) {
-                staircaseResult += '#';
+        // let staircaseResult = [];
+        // let n = Number(prompt("Enter size of the starircase and see the console:"));
+        // for (var row = 1; row <= n; row++) {
+        //     for (var column = 1; column <= row; column++) {
+        //         staircaseResult += '#';
+        //     }
+        //     staircaseResult += '\n';
+        // }
+        // console.log(staircaseResult);
+        let arr = [];
+        for (i = 0; i < 1; i++) {
+            arr.push(['#']);
+            for (j = 0; j < 3; j++) {
+                //arr[i][j] = '#';
+                console.log(arr[i]);
             }
-            staircaseResult += '\n';
+            console.log(arr);
         }
-        console.log(staircaseResult);
+
     }
 
 
